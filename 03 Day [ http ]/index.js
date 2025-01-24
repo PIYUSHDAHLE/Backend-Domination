@@ -1,10 +1,17 @@
-const http = require('http');
+const http = require('http') 
 
-const server = http.createServer((req,res) => {
-    res.writeHead(200,{'Content-Type':'text/plain'});
-    res.end('Hello World\n');
-
+server = http.createServer((req,res)=>{
+   if(req.url == '/'){
+    res.end('This is Home page')
+   }
+   if(req.url == '/about'){
+    res.end('This is About page')
+   }
+   if(req.url == '/contact'){
+    res.end('This is Contact page')
+   } 
 })
-server.listen(3000, () => {
-    console.log('Server running at 3000 port')
-        });
+
+server.listen(4000,()=>{
+    console.log('server is running on port 4000')
+})

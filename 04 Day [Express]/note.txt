@@ -1,0 +1,3 @@
+npm init -y : package.json file was create
+
+node -v : to chech node install or not
